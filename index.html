@@ -31,7 +31,7 @@
   <body>
     <header>
       <!-- navbar  -->
-      <nav class="bg-[#c6bdbd3a]">
+      <nav class="bg-[#c6bdbd3a] hidden initial-hidden">
         <div class="container mx-auto">
           <div class="navbar">
             <div class="navbar-start">
@@ -45,13 +45,18 @@
               <i class="fa-solid fa-bars-staggered"></i>
             </div>
             <div class="navbar-end gap-4 hidden md:flex">
-              <button class="btn btn-outline btn-primary">
+              <a href="#faq" class="btn btn-outline btn-primary" id="faq-btn">
                 <i class="fa-solid fa-circle-question"></i> FAQ
-              </button>
-              <button class="btn btn-outline btn-primary">
+              </a>
+              <a
+                href="#lesson-section"
+                class="btn btn-outline btn-primary"
+                id="learn-btn"
+              >
+                <i class="fa-solid fa-circle-question"></i>
                 <i class="fa-solid fa-book-open"></i> Learn
-              </button>
-              <button class="btn btn-outline btn-primary">
+              </a>
+              <button id="logout-btn" class="btn btn-outline btn-primary">
                 <i class="fa-regular fa-arrow-left-from-bracket"></i> Logout
               </button>
             </div>
@@ -59,7 +64,7 @@
         </div>
       </nav>
       <!-- Banner -->
-      <section class="container mx-auto">
+      <section id="header-banner" class="container mx-auto">
         <div class="hero min-h-screen">
           <div class="hero-content flex-col lg:flex-row-reverse">
             <img class="scale-80" src="./assets/hero-student.png" alt="" />
@@ -78,14 +83,23 @@
                 <fieldset class="space-y-1">
                   <label class="fieldset-label">Username</label>
                   <input
+                    id="username"
                     type="text"
                     class="input"
                     placeholder="Enter Your name"
                   />
                   <label class="fieldset-label">Password</label>
-                  <input type="password" class="input" placeholder="Password" />
+                  <input
+                    id="password"
+                    type="text"
+                    value="123456"
+                    class="input"
+                    placeholder="Password"
+                  />
                   <div><a class="link link-hover">Forgot password?</a></div>
-                  <button class="btn btn-primary mt-4">Get Started</button>
+                  <button id="start-btn" class="btn btn-primary mt-4">
+                    Get Started
+                  </button>
                 </fieldset>
               </div>
             </div>
@@ -93,24 +107,32 @@
         </div>
       </section>
     </header>
-    <main class="container mx-auto mb-52">
+    <main class="container mx-auto mb-52 hidden initial-hidden">
       <!-- Lesson Section -->
-      <section class="mb-52">
+      <section id="lesson-section" class="mt-52">
         <h2 class="primary-font text-4xl font-bold text-center mb-10">
           <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
         </h2>
-        <div id="lessons-container" class="flex gap-5 mb-8"></div>
-        <div class="py-16 bg-[#F8F8F8] rounded-3xl text-center space-y-4">
-          <p class="secondary-font text-xs text-[#79716B]">
-            আপনি এখনো কোন Lesson Select করেননি
-          </p>
-          <h4 class="text-4xl font-medium text-[#292524]">
-            একটি Lesson Select করুন।
-          </h4>
+        <div
+          id="lessons-container"
+          class="flex justify-center flex-wrap gap-5 mb-8"
+        ></div>
+        <div
+          id="lessons-details"
+          class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-[#F8F8F8] rounded-3xl"
+        >
+          <div class="text-center col-span-full p-16 space-y-4">
+            <p class="secondary-font text-xs text-[#79716B]">
+              আপনি এখনো কোন Lesson Select করেননি
+            </p>
+            <h4 class="text-4xl font-medium text-[#292524]">
+              একটি Lesson Select করুন।
+            </h4>
+          </div>
         </div>
       </section>
       <!-- FAQ -->
-      <section class="primary-font">
+      <section id="faq" class="primary-font mt-52">
         <h2 class="text-4xl font-bold text-center mb-10">
           <span class="text-[#00BCFF]">Frequently</span> Asked Questions
         </h2>
@@ -209,7 +231,7 @@
             Providing ED-Tech Applications since 2025
           </p>
         </aside>
-        <nav class="place-self-end">
+        <nav class="md:place-self-end">
           <h6 class="footer-title">Follow Us</h6>
           <div class="grid grid-flow-col gap-4 text-3xl">
             <a> <i class="fa-brands fa-facebook"></i></a>
