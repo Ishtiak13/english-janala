@@ -1,0 +1,15 @@
+.primary-font {
+  font-family: "Poppins", sans-serif;
+}
+.secondary-font {
+  font-family: "Hind Siliguri", sans-serif;
+}
+.primary-color {
+  color: #18181b;
+}
+.secondary-color {
+  color: #422ad5;
+}
+.hero-content {
+  max-width: 100%;
+}

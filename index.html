@@ -3,13 +3,222 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind & daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css file -->
+    <link rel="stylesheet" href="./style/index.css" />
+    <!-- Favicon and title -->
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <title>English জানালা</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <!-- navbar  -->
+      <nav class="bg-[#c6bdbd3a]">
+        <div class="container mx-auto">
+          <div class="navbar">
+            <div class="navbar-start">
+              <a class="text-xl font-semibold"
+                ><span class="primary-font">English</span
+                ><img class="inline-block" src="./assets/logo.png" alt="logo" />
+                <span class="secondary-font">জানালা</span></a
+              >
+            </div>
+            <div class="navbar-end md:hidden">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+            <div class="navbar-end gap-4 hidden md:flex">
+              <button class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-circle-question"></i> FAQ
+              </button>
+              <button class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-book-open"></i> Learn
+              </button>
+              <button class="btn btn-outline btn-primary">
+                <i class="fa-regular fa-arrow-left-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner -->
+      <section class="container mx-auto">
+        <div class="hero min-h-screen">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <img class="scale-80" src="./assets/hero-student.png" alt="" />
+            <div class="card w-full">
+              <div class="card-body">
+                <h1 class="primary-font text-5xl font-bold">
+                  <span class="text-[#00BCFF]">English</span> is Easy!!
+                </h1>
+                <p
+                  class="seconday-font text-2xl max-w-[727px] font-medium primary-color"
+                >
+                  আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন
+                  অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons
+                  আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+                <fieldset class="space-y-1">
+                  <label class="fieldset-label">Username</label>
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Enter Your name"
+                  />
+                  <label class="fieldset-label">Password</label>
+                  <input type="password" class="input" placeholder="Password" />
+                  <div><a class="link link-hover">Forgot password?</a></div>
+                  <button class="btn btn-primary mt-4">Get Started</button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="container mx-auto mb-52">
+      <!-- Lesson Section -->
+      <section class="mb-52">
+        <h2 class="primary-font text-4xl font-bold text-center mb-10">
+          <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h2>
+        <div id="lessons-container" class="flex gap-5 mb-8"></div>
+        <div class="py-16 bg-[#F8F8F8] rounded-3xl text-center space-y-4">
+          <p class="secondary-font text-xs text-[#79716B]">
+            আপনি এখনো কোন Lesson Select করেননি
+          </p>
+          <h4 class="text-4xl font-medium text-[#292524]">
+            একটি Lesson Select করুন।
+          </h4>
+        </div>
+      </section>
+      <!-- FAQ -->
+      <section class="primary-font">
+        <h2 class="text-4xl font-bold text-center mb-10">
+          <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h2>
+        <div class="space-y-5">
+          <div class="collapse collapse-plus bg-[#F8F8F8] rounded-2xl">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">
+              What is the difference between var, let, and const?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                <strong>var</strong> is function-scoped, can be re-declared, and
+                is hoisted. <strong>let</strong> is block-scoped, cannot be
+                re-declared, and is not hoisted. <strong>const</strong> is
+                block-scoped, cannot be re-declared or re-assigned, but its
+                properties (if an object or array) can be modified.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] rounded-2xl">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              What is the difference between map(), forEach(), and filter()?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                <strong>map()</strong> creates a new array by applying a
+                function to each element. <strong>forEach()</strong> executes a
+                function for each element but does not return a value.
+                <strong>filter()</strong> creates a new array with elements that
+                pass a test.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] rounded-2xl">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              What are arrow functions, and how are they different from regular
+              functions?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                Arrow functions are a shorter way to write functions. They do
+                not have their own <strong>this</strong> (they inherit it from
+                the surrounding scope), cannot be used as constructors, and do
+                not have an <strong>arguments</strong> object.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] rounded-2xl">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              How do JavaScript Promises work?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                Promises handle asynchronous operations. They have three states:
+                <strong>pending</strong> (initial state),
+                <strong>fulfilled</strong> (operation succeeded), and
+                <strong>rejected</strong> (operation failed). You use
+                <strong>.then()</strong> to handle success and
+                <strong>.catch()</strong> to handle errors.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] rounded-2xl">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              How do closures work in JavaScript?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                Closures allow a function to "remember" the environment in which
+                it was created. They are useful for data encapsulation, creating
+                private variables, and implementing callbacks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr class="border border-[#FFEBEB]" />
+    <footer class="">
+      <div class="container mx-auto footer sm:footer-horizontal p-10">
+        <aside>
+          <a class="text-xl font-semibold"
+            ><span class="primary-font">English</span
+            ><img class="inline-block" src="./assets/logo.png" alt="logo" />
+            <span class="secondary-font">জানালা</span></a
+          >
+          <p>
+            <span class="text-xl font-medium secondary-font">
+              ইংরেজি শিখুন সহজে</span
+            >
+            <br />
+            Providing ED-Tech Applications since 2025
+          </p>
+        </aside>
+        <nav class="place-self-end">
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="grid grid-flow-col gap-4 text-3xl">
+            <a> <i class="fa-brands fa-facebook"></i></a>
+            <a> <i class="fa-brands fa-youtube"></i></a>
+            <a> <i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </nav>
+      </div>
+    </footer>
     <script src="./script/index.js"></script>
   </body>
 </html>
